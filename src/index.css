@@ -280,6 +280,7 @@ main {
   display: inline-block;
   font-size: 0.85rem;
   margin-left: 0.25rem;
+  transition: transform 0.3s ease-in-out;
 }
 
 .challenge-item-details.expanded .challenge-item-details-icon {
@@ -313,8 +314,19 @@ main {
   width: 30rem;
   max-width: 90%;
   z-index: 10;
+  animation: slide-in-fade-out 0.8s ease-in forwards;
 }
-
+/* forwards => after animation keeps the 100% setings. */
+@keyframes slide-in-fade-out {
+  0% {
+opacity: 0;
+transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .modal h2 {
   margin-top: 0;
 }
