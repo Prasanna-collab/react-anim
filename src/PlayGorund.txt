@@ -1,0 +1,23 @@
+CSS itself enough.
+
+CSS Transitions allow you to perfom animation.
+
+//Challenges in JUST CSS 
+
+We can add anmations when it is in the DOM => When we remove it from the dom, it gest removed suddenly.
+Acheivig styles for ceratin level is more complex.
+
+For that we can use Framer Motion for react apps.
+
+
+//For when element mounted to the DOM
+transtition={{duration:0.3s, type="spring", bounce:0, stiffness:500, mass:100}}
+animate={{x:45, y:23, rotate:90, opacity:1}}
+initial={{x:0, y:30, opacity:0}}
+
+//When Item removed from the DOM
+
+exit={{x:45, opacity:1}}
+
+AnimationPresence => Component should be wrapped inside where we want the motion animation. AnimationPresence looks
+for the exit property before it is getting removed from the DOM.

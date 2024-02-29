@@ -1,5 +1,5 @@
 import { useContext, useRef, useState } from 'react';
-
+import {motion,} from "framer-motion"
 import { ChallengesContext } from '../store/challenges-context.jsx';
 import Modal from './Modal.jsx';
 import images from '../assets/images.js';
@@ -39,7 +39,7 @@ export default function NewChallenge({ onDone }) {
   }
 
   return (
-    <Modal title="New Challenge" onClose={onDone}>
+ <Modal title="New Challenge" onClose={onDone}>
       <form id="new-challenge" onSubmit={handleSubmit}>
         <p>
           <label htmlFor="title">Title</label>
@@ -76,5 +76,7 @@ export default function NewChallenge({ onDone }) {
         </p>
       </form>
     </Modal>
+   
+   
   );
 }
